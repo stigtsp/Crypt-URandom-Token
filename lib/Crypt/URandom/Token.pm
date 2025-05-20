@@ -10,7 +10,7 @@ use Exporter qw(import);
 
 our @EXPORT_OK = qw(urandom_token);
 
-our $VERION = "0.003";
+our $VERSION = "0.005";
 
 =head1 NAME
 
