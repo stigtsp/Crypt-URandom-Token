@@ -131,6 +131,10 @@ sub urandom_token {
   my $length   = shift || 44;
   my @alphabet = _alphabet(shift);
 
+  unless ($length > 0) {
+    croak "length must be a positive integer";
+  }
+
   my $bias_lim = 256 % @alphabet;
 
   my (@bytes, @token);
