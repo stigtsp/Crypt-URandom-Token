@@ -139,7 +139,7 @@ sub urandom_token {
 
   my (@bytes, @token);
   while (@token < $length) {
-    @bytes = split "", urandom(64) unless @bytes;
+    @bytes = split "", urandom(32) unless @bytes;
     my $num = ord(shift @bytes);
     next if $num < $bias_lim;
     push @token, $alphabet[$num % @alphabet];
